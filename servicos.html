@@ -31,7 +31,7 @@
                     <ul class="nav-links">
                         <li><a href="index.html">Home</a></li>
                         <li><a href="servicos.html">serviços</a></li>
-                        <li><a href="">equipe</a></li>
+                        <li><a href="equipe.html">equipe</a></li>
                     </ul>
                 </nav>
 
@@ -41,11 +41,11 @@
             <section class="intrucao">
                 <h2>Como funciona o aplicativo?</h2>
                 <div class="botoes">
-                    <button type="button">Primeiro cadastre um remédio</button>
-                    <button type="button">E o aplicativo lembrará a hora de tomar</button>
+                    <button type="button" onclick="mostrarInstrucao()">Primeiro cadastre um remédio</button>
+                    <button type="button" onclick="mostrarAplicativo()">E o aplicativo lembrará a hora de tomar</button>
                 </div><!-- botoes -->
 
-                <div class="desenho">
+                <div class="desenho" id="desenho">
                     <div class="lembrete">
                         <div class="foto"></div>
                         <p>Olá seu João, é hora de tomar seu remédio.</p>
@@ -71,12 +71,27 @@
                     </div><!-- cronometro -->
 
                 </div> <!-- desenho -->
+
+                <div class="form-instrucao" id="form-instrucao">
+                    <h2>Adicionar um novo remédio</h2>
+                    <form>
+                        <label for="dipirona">Nome do remédio:</label>
+                        <input type="text" value="Dipirona" id="dipirona" disabled> 
+                        <label for="mg">Qual a dosagem:</label>
+                        <input type="text" value="50 mg" id="mg" disabled>
+                        <label for="one">Quantos comprimidos:</label>
+                        <input type="text" value="1" id="one" disabled>
+                        <label for="hora">Horário para tomar:</label>
+                        <input type="text" value="15:00" id="hora" disabled>
+                        <input type="submit" class="salvar" value="Salvar">
+                    </form>
+                </div><!-- form-instrucao -->
             </section><!-- intrucao -->
 
             <footer>
                 <section id="contato" class="contato">
                     <h2>Envie-nos sua mensagem</h2>
-                    <form>
+                    <form class="cadastro_remedio">
                         <input type="text" name="nome" placeholder="*Nome">
                         <input type="email" name="email" placeholder="*E-mail">
                         <input type="tel" name="telefone" placeholder="*telefone">
@@ -86,10 +101,10 @@
                 </section><!-- section contato -->
                 <section class="endereco">
                     <h2>Fale conosco</h2>
-                    <p>Ligue: (99) 99999-9999<br>
+                    <p>Ligue: (11) 99876-5432<br>
                     Email: facilitating@gmail.com</p>
-                    <p>Av. Algum lugar, 000<br>
-                    Jardim alguma coisa - São Paulo/SP</p>
+                    <p>Av. Somewhere, 000<br>
+                    Jardim Everwhere - São Paulo/SP</p>
 
                 </section>
             </footer>
